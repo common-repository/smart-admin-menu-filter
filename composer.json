@@ -1,0 +1,47 @@
+{
+	"name": "wpadmin-ai/smart-admin-menu-filter",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"description": "Advanced phonetic admin menu search and filter for WordPress",
+	"homepage": "https://wpadmin.ai",
+	"authors": [
+		{
+			"name": "wpadmin.ai",
+			"email": "info@wpadmin.ai",
+			"homepage": "https://wpadmin.ai"
+		}
+	],
+	"keywords": [
+		"wordpress", "wp", "admin menu filter", "menu filter", "menu sort", "menu search", "smart menu search", "smart menu filter"
+	],
+	"support": {
+		"issues": "https://wpadmin.ai",
+		"forum": "https://wpadmin.ai/contact"
+	},
+	"config": {
+		"preferred-install": "dist",
+		"optimize-autoloader": true
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"php": ">=7.1",
+		"composer/installers": "^2.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*",
+		"wp-coding-standards/wpcs": "2.3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"SmartAdminMenuFilter\\": "inc"
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs --standard=phpcs.xml"
+	}
+}

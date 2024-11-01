@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ruleset nsmart-admin-menu-filter.phpame="WP">
+	<description>Custom Smart Admin Menu Filter PHPCS rules for WP</description>
+
+	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
+	<config name="ignore_errors_on_exit" value="0" />
+	<config name="ignore_warnings_on_exit" value="0" />
+    <config name="show_progress " value="1" />
+    <config name="report_format" value="full" />
+    <config name="show_warnings" value="1" />
+	<arg name="colors" />
+	<arg value="p" />
+
+	<!-- Includes -->
+    <file>./smart-admin-menu-filter.php</file>
+    <file>./inc</file>
+
+	<!-- Rules -->
+	<rule ref="WordPress-Core">
+		<exclude name="WordPress.NamingConventions.ValidVariableName" />
+	</rule>
+	<rule ref="WordPress-Docs">
+		<exclude name="Generic.Commenting.DocComment.MissingShort" />
+		<exclude name="Generic.Files.LowercasedFilename" />
+		<exclude name="Squiz.Commenting.ClassComment.SpacingAfter" />
+		<exclude name="Squiz.Commenting.FileComment.Missing" />
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
+		<exclude name="Squiz.Commenting.InlineComment.SpacingBefore" />
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
+		<exclude name="WordPress.WP.I18n.UnorderedPlaceholders" />
+		<exclude name="WordPress.Files.FileName" />
+	</rule>
+</ruleset>
